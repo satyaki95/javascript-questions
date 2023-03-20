@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: aqua;
+}
+
+.container{
+    height: 50%;
+    width: 50%;
+}
+input{
+    margin-top: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    height: 20px;
+    width: 100x;
+}
+button{
+    background-color: bisque;
+    padding: 8px;
+}
+#para{
+    
+}

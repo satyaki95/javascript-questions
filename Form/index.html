@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    <form id="form">
+        <fieldset> 
+            <legend>Bio data</legend>
+            <div>
+                <label for="fullname">FullName:</label>
+                <input type="text" name="fullname" id="name" placeholder="Enter your name">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" min="4" max="10" placeholder="Enter your password">
+            </div>
+            <br>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" name="dob" id="dob">
+            </div>
+            <br>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender"  value="male">Male
+                <input type="radio" name="gender"  value="female">Female
+            </div>
+            <br>
+            <div>
+                <label for="religian">Religian:</label>
+                <input type="checkbox" name="indian" value="indian">Indian
+                <input type="checkbox" name="us"  value="us">Us
+            </div>
+            <br>
+            <div>
+                <label for="depertment">Depertment:</label>
+               <select name="" id="depertment" >
+                <option value="cse">CSE</option>
+                <option value="ece" selected>ECE</option>
+                <option value="eee">EEE</option>
+               </select>
+            </div>
+            <br>
+            <div>
+                <label for="feedback">Feedback</label> <br>
+                <textarea name="" id="feedback" cols="30" rows="10"></textarea>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Register" id="submit">
+            </div>
+        </fieldset>
+        
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
