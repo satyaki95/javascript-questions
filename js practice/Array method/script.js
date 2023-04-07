@@ -96,8 +96,7 @@ delete fruits8[0];
 const myGirls = ["Cecilie", "Lone"];
 const myBoys = ["Emil", "Tobias", "Linus"];
 
-const myChildren = myBoys.concat(myGirls
-    );
+const myChildren = myBoys.concat(myGirls);
 // console.log(myChildren);
 
 // concat() method can take any number of array arguments
