@@ -1,5 +1,3 @@
-
-
 // function addNode(){
 //     var newP = document.createElement("h1");
 //     var newNode = document.createTextNode("hallo");
@@ -9,10 +7,6 @@
 // }
 // addNode();
 
-
-var student= {age:20, batch:"ABC"};
+var student = { age: 20, batch: "ABC" };
 delete student.age;
 console.log(Navigator.appversion());
-
-
-

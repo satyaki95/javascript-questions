@@ -16,13 +16,9 @@
 // Example 1
 // Input
 
-
 //  1
 //  10
 //  1 2 3 2 3 1 4 2 1 3
-
-
- 
 
 // Output
 
@@ -30,15 +26,15 @@
 
 // Explanation
 
-// Testcase 1: 
-// We encounter 1, 2, 3. We encounter 2 again so we increment its leftmost occurrence by 1. 
-// The updated array becomes 1 3 3 2. We encounter 3 next. 
-// So we increment its left most occurrence by 1. So updated array is 1 4 3 2 3. 
-// Next we encounter 1, so we increment the leftmost occurrence of 1 by 1. 
-// New updated array is 2 4 3 2 3 1. Next we encounter 4, so we do the same and increase its first occurrence by 1. 
-// New updated array is. 2 5 3 2 3 1 4. Next we encounter 2, so we do the same and increase its first occurrence by 1. 
-// New updated array is. 3 5 3 2 3 1 4 2. Next we encounter 1, so we do the same and increase its first occurrence by 1. 
-// New updated array is 3 5 3 2 3 2 4 2 1. Next we encounter 3, so we do the same and increase its first occurrence by 1. 
+// Testcase 1:
+// We encounter 1, 2, 3. We encounter 2 again so we increment its leftmost occurrence by 1.
+// The updated array becomes 1 3 3 2. We encounter 3 next.
+// So we increment its left most occurrence by 1. So updated array is 1 4 3 2 3.
+// Next we encounter 1, so we increment the leftmost occurrence of 1 by 1.
+// New updated array is 2 4 3 2 3 1. Next we encounter 4, so we do the same and increase its first occurrence by 1.
+// New updated array is. 2 5 3 2 3 1 4. Next we encounter 2, so we do the same and increase its first occurrence by 1.
+// New updated array is. 3 5 3 2 3 1 4 2. Next we encounter 1, so we do the same and increase its first occurrence by 1.
+// New updated array is 3 5 3 2 3 2 4 2 1. Next we encounter 3, so we do the same and increase its first occurrence by 1.
 // New updated array is 4 5 3 2 3 2 4 2 1 3.
 
 // Constraints:
@@ -49,31 +45,23 @@
 
 // 1 <= arr[i] <= 10^5
 
-function updateArray(arr) { 
+function updateArray(arr) {
   let updatedArr = arr;
- let map = new Map();
-  for(let i=0;i<arr.length;i++){
-
-    if(map.get(updatedArr[i])){
-
-      map.set(updatedArr[i]+1,1);
+  let map = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    if (map.get(updatedArr[i])) {
+      map.set(updatedArr[i] + 1, 1);
 
       let idx = updatedArr.indexOf(updatedArr[i]);
 
-      updatedArr[idx] = updatedArr[idx]+1;     
+      updatedArr[idx] = updatedArr[idx] + 1;
+    } else {
+      map.set(updatedArr[i], 1);
     }
-    else{
-      map.set(updatedArr[i],1);
-    }           
-  }    
+  }
   return updatedArr;
 }
-let arr = [1, 2, 3, 2, 3, 1, 4, 2, 1, 3, 5 , 6];
+let arr = [1, 2, 3, 2, 3, 1, 4, 2, 1, 3, 5, 6];
 
 let updatedArr = updateArray(arr);
 console.log(updatedArr);
-
-
-
-
-

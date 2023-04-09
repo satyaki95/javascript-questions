@@ -1,4 +1,4 @@
-// toString() 
+// toString()
 // Convert to string of array values
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -11,7 +11,6 @@ const frt = fruits.toString();
 // method also joins all array elements into a string.
 // It behaves just like toString()
 // but in addition you can specify the separator
-
 
 const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
 const frt1 = fruits.join(" * ");
@@ -108,7 +107,6 @@ const myChildren1 = arr1.concat(arr2, arr3);
 
 // console.log(myChildren1);
 
-
 // -----------------------  ****  ------------------------
 
 // splice
@@ -127,6 +125,6 @@ fruits9.splice(0, 1);
 // method creates a new array and not remove any elements from the source array
 
 const fruits10 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-const citrus = fruits10.slice(1,3);
+const citrus = fruits10.slice(1, 3);
 console.log(citrus);
 console.log(fruits10);

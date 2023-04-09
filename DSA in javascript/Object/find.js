@@ -7,38 +7,36 @@
 */
 
 var obj = {
-    a: {
-        b: {
-            c: 12,
-            j: false
-        },
-        k: null
-    }
+  a: {
+    b: {
+      c: 12,
+      j: false,
+    },
+    k: null,
+  },
 };
 
 const findPath = (object, path) => {
-   
-//    console.log(Object.keys(object));
-   const listt= path.split('.');
-   let objectpos=object[listt[0]];
-   for( let i=1;i<listt.length;i++){
-    if(typeof objectpos=='object'){
-        objectpos=objectpos[listt[i]];
-    } else{
-        return undefined;
+  //    console.log(Object.keys(object));
+  const listt = path.split(".");
+  let objectpos = object[listt[0]];
+  for (let i = 1; i < listt.length; i++) {
+    if (typeof objectpos == "object") {
+      objectpos = objectpos[listt[i]];
+    } else {
+      return undefined;
     }
-   }
-   return objectpos;
+  }
+  return objectpos;
 };
 
+console.log(findPath(obj, "a.b.c")); // 12
+console.log(findPath(obj, "a.b")); // {c: 12, j: false}
+console.log(findPath(obj, "a.b.d")); // undefined
 
-console.log(findPath(obj, 'a.b.c')); // 12
-console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
-console.log(findPath(obj, 'a.b.d')); // undefined
-
-console.log(findPath(obj, 'a.c')); // undefined
-console.log(findPath(obj, 'a.b.c.d')); // undefined
-console.log(findPath(obj, 'a.b.c.d.e')); // undefined
-console.log(findPath(obj, 'a.b.j')); //false
-console.log(findPath(obj, 'a.b.j.k')); //undefined
-console.log(findPath(obj, 'a.k')); //null
+console.log(findPath(obj, "a.c")); // undefined
+console.log(findPath(obj, "a.b.c.d")); // undefined
+console.log(findPath(obj, "a.b.c.d.e")); // undefined
+console.log(findPath(obj, "a.b.j")); //false
+console.log(findPath(obj, "a.b.j.k")); //undefined
+console.log(findPath(obj, "a.k")); //null

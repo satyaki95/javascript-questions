@@ -1,7 +1,5 @@
-
-
 setTimeout(() => {
-    console.log("hello");
+  console.log("hello");
 }, 0);
 
 // setInterval(() => {
@@ -9,4 +7,3 @@ setTimeout(() => {
 // }, 0);
 
 console.log("hello1");
-

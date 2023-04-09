@@ -7,24 +7,21 @@
 // console.log(b);
 
 let inputt = [
-    {
-        val:1,
-        str:'a'
-    },
-    {
-        val:2,
-        str:'b'
-    },
-    {
-        val:3,
-        str:'c'
-    },
-]
-let arre=[]
-inputt.map((item)=>{
-    arre.push(item.str);
-})
+  {
+    val: 1,
+    str: "a",
+  },
+  {
+    val: 2,
+    str: "b",
+  },
+  {
+    val: 3,
+    str: "c",
+  },
+];
+let arre = [];
+inputt.map((item) => {
+  arre.push(item.str);
+});
 console.log(arre);
-
-
-

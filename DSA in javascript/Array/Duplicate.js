@@ -11,14 +11,12 @@ let newArr = [];
 //     }
 // }
 
-
 // arr.forEach(element =>{
 //     if(!newArr.includes(element)){
 //         newArr.push(element);
 //     }
 // })
 
-
-newArr = [...new Set(arr)]
+newArr = [...new Set(arr)];
 
 console.log(newArr);

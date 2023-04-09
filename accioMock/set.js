@@ -4,7 +4,6 @@
 //     }, 1000*i);
 // }
 
-
 var nStr = "Geeks";
-nStr = nStr.split("").reverse().toString().replace(/,/g,"");
+nStr = nStr.split("").reverse().toString().replace(/,/g, "");
 console.log(nStr);
