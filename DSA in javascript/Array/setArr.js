@@ -18,14 +18,3 @@ console.log(chunk([2, 4, 2, 5, 3, 6, 3], 1)); // [[2], [4], [2], [5], [3], [6], 
 console.log(chunk([2, 4, 2, 5], 5)); // [[2, 4, 2, 5]]
 console.log(chunk([2, 2], 3)); // [[2, 2]]
 
-const findPath = (object, path) => {
-  const keys = path.split(".");
-  let current = object;
-  for (const key of keys) {
-    if (current[key] === undefined) {
-      return undefined;
-    }
-    current = current[key];
-  }
-  return current;
-};

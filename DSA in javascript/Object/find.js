@@ -17,17 +17,15 @@ var obj = {
 };
 
 const findPath = (object, path) => {
-  //    console.log(Object.keys(object));
-  const listt = path.split(".");
-  let objectpos = object[listt[0]];
-  for (let i = 1; i < listt.length; i++) {
-    if (typeof objectpos == "object") {
-      objectpos = objectpos[listt[i]];
-    } else {
+  const keys = path.split(".");
+  let current = object;
+  for (const key of keys) {
+    if (current[key] === undefined) {
       return undefined;
     }
+    current = current[key];
   }
-  return objectpos;
+  return current;
 };
 
 console.log(findPath(obj, "a.b.c")); // 12
