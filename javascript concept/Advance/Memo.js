@@ -26,3 +26,7 @@ console.time();
 const effi = memo(cal);
 console.log(effi(5));
 console.timeEnd();
+console.time();
+console.log(effi(5));
+console.timeEnd();
+

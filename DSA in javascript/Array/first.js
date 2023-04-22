@@ -6,7 +6,6 @@
 const sumArr = (arr) => {
   const sum = arr.reduce((acc, item) => {
     const number = parseInt(item.replace(/[^0-9]/g, ""));
-    // console.log(number);
     if (!isNaN(number)) {
       return acc + number;
     }
