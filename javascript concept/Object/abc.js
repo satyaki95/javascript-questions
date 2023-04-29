@@ -11,10 +11,9 @@ function maximizeProduct(arr) {
     for (let c of s1) {
       if (unmap.has(c)) {
         unmap.set(c, unmap.get(c) + 1);
-        console.log('hi');
+      } else {
+        unmap.set(c, 1);
       }
-      unmap.set(c, 1);
-      
     }
 
     for (let j = i + 1; j < n; j++) {
