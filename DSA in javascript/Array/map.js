@@ -6,34 +6,31 @@ let map = new Map();
 for (let i = 0; i < arr.length; i++) {
   if (map.get(arr[i])) {
     map.set(arr[i], map.get(arr[i]) + 1); // 1 2
-  } 
-    map.set(arr[i], 1);
-  
-      
-  
+  }
+  map.set(arr[i], 1);
 }
-console.log(map);
-// map.forEach((value, key) => {
-//   if (value == 1) {
-//     console.log(value+":"+key);
-//   }
-// });
 
-// function findTwoRepeatedElements(n, arr) {
-//   let result = [];
-//   let map = new Map();
+map.forEach((value, key) => {
+  if (value == 1) {
+    console.log(value + ":" + key);
+  }
+});
 
-//   for (let i = 0; i < arr.length; i++) {
-//     if (map.has(arr[i])) {
-//       result.push(arr[i]);
-//     } else {
-//       map.set(arr[i], true);
-//     }
-//   }
+function findTwoRepeatedElements(n, arr) {
+  let result = [];
+  let map = new Map();
 
-//   return result;
-// }
+  for (let i = 0; i < arr.length; i++) {
+    if (map.has(arr[i])) {
+      result.push(arr[i]);
+    } else {
+      map.set(arr[i], true);
+    }
+  }
+
+  return result;
+}
 
 let n = 4;
 let arr2 = [1, 2, 1, 3, 4, 3];
-// console.log(findTwoRepeatedElements(n, arr));
+console.log(findTwoRepeatedElements(n, arr));
